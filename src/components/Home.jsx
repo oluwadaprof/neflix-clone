@@ -1,11 +1,13 @@
 import React from 'react'
 import Row from './row/Row'
 import requests from '../requests'
-import Banner from './Banner/Banner'
+import Banner from './Banner/Banner';
+import Nav from '../components/Nav/Nav'
 
 const Home = () => {
     return (
         <div>
+            <Nav/>
             <Banner/>
             <Row title='Netflix Originals' fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
             <Row title='Trending Now' fetchUrl={requests.fetchTrending} />

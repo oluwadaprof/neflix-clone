@@ -3,23 +3,8 @@
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
-    
 }
 
-.permuta-bgc {
-    height: 50rem;
-
+.app {
+    background-color: #111;
 }
-
-.permuta-bgc1 {
-    background-color: #3434A4;
-    height: 70rem;
-}
-
-.permuta-bgc2 {
-    background-color: #e9edfd;
-    overflow: hidden;
-    height: 252rem;
-    
-}
-
