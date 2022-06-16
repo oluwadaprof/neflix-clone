@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import  '../Nav/nav.css';
 
+
 const Nav = () => {
+const [show, handleShow] = useState();
+   
+useEffect(()=>{
+  window.addEventListener('scroll', ()=> {
+    window.scrollY > 100 ? handleShow(true) : handleShow(false)
+  })
+  return () => {
+    window.removeEventListener("scroll", null)
+  }
+},[])  
   return (
-    <div className='nav'>
+    <div className={`nav ${show && 'nav__black'}`}>
       <img 
       className='nav__logo' 
       src="https://upload.wikimedia.org/wikipedia/commons/archive/6/69/20220504140801%21Netflix_logo.svg" 
